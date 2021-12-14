@@ -5,6 +5,17 @@ import { CContainer, CSpinner } from '@coreui/react'
 // routes config
 import routes from '../routes'
 
+const getJWT = () => {
+  return (Headers['authorization'] = localStorage.getItem('jwt_token'))
+}
+
+const isLoggedIn = () => {
+  let is_logged_in =
+    getJWT() !== null && getJWT() !== 'null' && getJWT() !== undefined && getJWT() !== 'undefined'
+  console.log('loginToken: ', getJWT(), 'is_logged_in: ', is_logged_in)
+  return is_logged_in
+}
+
 const AppContent = () => {
   return (
     <CContainer lg>
@@ -18,11 +29,19 @@ const AppContent = () => {
                   path={route.path}
                   exact={route.exact}
                   name={route.name}
-                  render={(props) => (
+                  /* render={(props) => (
                     <>
                       <route.component {...props} />
                     </>
-                  )}
+                  )} */
+
+                  render={(props) =>
+                    isLoggedIn() ? (
+                      <route.component {...props} />
+                    ) : (
+                      <Redirect to={{ pathname: '/login' }} />
+                    )
+                  }
                 />
               )
             )

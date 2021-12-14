@@ -1,7 +1,7 @@
 {
   "name": "@coreui/coreui-free-react-admin-template",
   "version": "4.1.0",
-  "description": "CoreUI Free React Admin Template",
+  "description": "Gestion Entreprise",
   "homepage": ".",
   "bugs": {
     "url": "https://github.com/coreui/coreui-free-react-admin-template/issues"
@@ -17,7 +17,8 @@
     "changelog": "auto-changelog --starting-version 4.1.0 --commit-limit false --hide-credit",
     "eject": "react-scripts eject",
     "lint": "eslint \"src/**/*.js\"",
-    "start": "react-scripts --openssl-legacy-provider start",
+    "start": "react-scripts start",
+    "startold": "react-scripts --openssl-legacy-provider start",
     "test": "react-scripts test",
     "test:cov": "npm test -- --coverage --watchAll=false",
     "test:debug": "react-scripts --inspect-brk test --runInBand"

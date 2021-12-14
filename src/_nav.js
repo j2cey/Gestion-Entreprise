@@ -1,16 +1,18 @@
-import React from 'react'
+import React from 'react' // coreui-react-v4.1.0
 import CIcon from '@coreui/icons-react'
 import {
   cilBell,
   cilCalculator,
   cilChartPie,
-  cilCursor,
-  cilDrop,
+  cilBarcode,
+  cilEqualizer,
   cilNotes,
-  cilPencil,
-  cilPuzzle,
+  cilBriefcase,
   cilSpeedometer,
   cilStar,
+  cilAddressBook,
+  cilBook,
+  cilCameraControl,
 } from '@coreui/icons'
 import { CNavGroup, CNavItem, CNavTitle } from '@coreui/react'
 
@@ -27,181 +29,238 @@ const _nav = [
   },
   {
     component: CNavTitle,
-    name: 'Theme',
-  },
-  {
-    component: CNavItem,
-    name: 'Colors',
-    to: '/theme/colors',
-    icon: <CIcon icon={cilDrop} customClassName="nav-icon" />,
-  },
-  {
-    component: CNavItem,
-    name: 'Typography',
-    to: '/theme/typography',
-    icon: <CIcon icon={cilPencil} customClassName="nav-icon" />,
-  },
-  {
-    component: CNavTitle,
-    name: 'Components',
+    name: 'DAF',
   },
   {
     component: CNavGroup,
-    name: 'Base',
-    to: '/base',
-    icon: <CIcon icon={cilPuzzle} customClassName="nav-icon" />,
+    name: 'Gest. Financière',
+    to: '/daf-gesfin',
+    icon: <CIcon icon={cilEqualizer} customClassName="nav-icon" />,
     items: [
       {
         component: CNavItem,
-        name: 'Accordion',
-        to: '/base/accordion',
+        name: 'Salaires',
+        to: '/daf-gesfin/salaires',
       },
       {
         component: CNavItem,
-        name: 'Breadcrumb',
-        to: '/base/breadcrumbs',
+        name: 'Budget',
+        to: '/daf-gesfin/budget',
       },
       {
         component: CNavItem,
-        name: 'Cards',
-        to: '/base/cards',
+        name: 'Caisse',
+        to: '/daf-gesfin/caisse',
+      },
+    ],
+  },
+  {
+    component: CNavGroup,
+    name: 'Gest. Administrative',
+    to: '/daf-gesadmin',
+    icon: <CIcon icon={cilBook} customClassName="nav-icon" />,
+    items: [
+      {
+        component: CNavItem,
+        name: 'Clients',
+        to: '/daf-gesadmin/clients',
       },
       {
         component: CNavItem,
-        name: 'Carousel',
-        to: '/base/carousels',
+        name: 'Prog. Formation',
+        to: '/daf-gesadmin/progformation',
       },
       {
         component: CNavItem,
-        name: 'Collapse',
-        to: '/base/collapses',
+        name: 'Gest. Prestataire',
+        to: '/daf-gesadmin/gesprestataire',
       },
       {
         component: CNavItem,
-        name: 'List group',
-        to: '/base/list-groups',
+        name: 'Rapport Activités',
+        to: '/daf-gesadmin/rapportactivites',
+      },
+    ],
+  },
+  {
+    component: CNavGroup,
+    name: 'Gest. Moyens GNX',
+    to: '/daf-gesmoyensgenx',
+    icon: <CIcon icon={cilBarcode} customClassName="nav-icon" />,
+    items: [
+      {
+        component: CNavItem,
+        name: 'Logistique',
+        to: '/daf-gesmoyensgenx/logistique',
+      },
+    ],
+  },
+  {
+    component: CNavTitle,
+    name: 'DRH',
+  },
+  {
+    component: CNavGroup,
+    name: 'Comptabilité',
+    to: '/compta',
+    icon: <CIcon icon={cilCalculator} customClassName="nav-icon" />,
+    items: [
+      {
+        component: CNavItem,
+        name: 'Prêts',
+        to: '/compta/prets',
       },
       {
         component: CNavItem,
-        name: 'Navs & Tabs',
-        to: '/base/navs',
+        name: 'Temps Travail',
+        to: '/compta/tempstravail',
       },
       {
         component: CNavItem,
-        name: 'Pagination',
-        to: '/base/paginations',
+        name: 'Cards xxxx',
+        to: '/compta/cards',
       },
       {
         component: CNavItem,
-        name: 'Placeholders',
-        to: '/base/placeholders',
+        name: 'Carousel xxxx',
+        to: '/compta/carousels',
+      },
+      {
+        component: CNavItem,
+        name: 'Collapse xxxx',
+        to: '/compta/collapses',
+      },
+      {
+        component: CNavItem,
+        name: 'List group xxxx',
+        to: '/compta/list-groups',
+      },
+      {
+        component: CNavItem,
+        name: 'Navs & Tabs xxxx',
+        to: '/compta/navs',
+      },
+      {
+        component: CNavItem,
+        name: 'Pagination xxxx',
+        to: '/compta/paginations',
+      },
+      {
+        component: CNavItem,
+        name: 'Placeholders xxxx',
+        to: '/compta/placeholders',
       },
       {
         component: CNavItem,
         name: 'Popovers',
-        to: '/base/popovers',
+        to: '/compta/popovers',
       },
       {
         component: CNavItem,
-        name: 'Progress',
-        to: '/base/progress',
+        name: 'Progress xxxx',
+        to: '/compta/progress',
       },
       {
         component: CNavItem,
-        name: 'Spinners',
-        to: '/base/spinners',
+        name: 'Spinners xxxx',
+        to: '/compta/spinners',
       },
       {
         component: CNavItem,
-        name: 'Tables',
-        to: '/base/tables',
+        name: 'Tables xxxx',
+        to: '/compta/tables',
       },
       {
         component: CNavItem,
-        name: 'Tooltips',
-        to: '/base/tooltips',
+        name: 'Tooltips xxxx',
+        to: '/compta/tooltips',
       },
     ],
   },
   {
     component: CNavGroup,
-    name: 'Buttons',
-    to: '/buttons',
-    icon: <CIcon icon={cilCursor} customClassName="nav-icon" />,
+    name: 'Personnel',
+    to: '/personnel',
+    icon: <CIcon icon={cilAddressBook} customClassName="nav-icon" />,
     items: [
       {
         component: CNavItem,
-        name: 'Buttons',
-        to: '/buttons/buttons',
+        name: 'Fiche Signalétique',
+        to: '/personnel/fichesignaletique',
       },
       {
         component: CNavItem,
-        name: 'Buttons groups',
-        to: '/buttons/button-groups',
+        name: 'Discipline',
+        to: '/personnel/discipline',
       },
       {
         component: CNavItem,
-        name: 'Dropdowns',
-        to: '/buttons/dropdowns',
+        name: 'Congés',
+        to: '/personnel/conges',
+      },
+      {
+        component: CNavItem,
+        name: 'Type Contrat',
+        to: '/personnel/typecontrat',
       },
     ],
   },
   {
     component: CNavGroup,
-    name: 'Forms',
+    name: 'Recrutement',
     icon: <CIcon icon={cilNotes} customClassName="nav-icon" />,
     items: [
       {
         component: CNavItem,
-        name: 'Form Control',
-        to: '/forms/form-control',
+        name: 'Offres, Fiche Poste',
+        to: '/recrutement/offres-ficheposte',
       },
       {
         component: CNavItem,
         name: 'Select',
-        to: '/forms/select',
+        to: '/recrutement/select',
       },
       {
         component: CNavItem,
         name: 'Checks & Radios',
-        to: '/forms/checks-radios',
+        to: '/recrutement/checks-radios',
       },
       {
         component: CNavItem,
         name: 'Range',
-        to: '/forms/range',
+        to: '/recrutement/range',
       },
       {
         component: CNavItem,
         name: 'Input Group',
-        to: '/forms/input-group',
+        to: '/recrutement/input-group',
       },
       {
         component: CNavItem,
         name: 'Floating Labels',
-        to: '/forms/floating-labels',
+        to: '/recrutement/floating-labels',
       },
       {
         component: CNavItem,
         name: 'Layout',
-        to: '/forms/layout',
+        to: '/recrutement/layout',
       },
       {
         component: CNavItem,
         name: 'Validation',
-        to: '/forms/validation',
+        to: '/recrutement/validation',
       },
     ],
   },
   {
     component: CNavItem,
-    name: 'Charts',
-    to: '/charts',
+    name: 'Evaluation',
+    to: '/evaluation',
     icon: <CIcon icon={cilChartPie} customClassName="nav-icon" />,
   },
   {
     component: CNavGroup,
-    name: 'Icons',
+    name: 'Icons xxxx',
     icon: <CIcon icon={cilStar} customClassName="nav-icon" />,
     items: [
       {
@@ -227,7 +286,7 @@ const _nav = [
   },
   {
     component: CNavGroup,
-    name: 'Notifications',
+    name: 'Notifications xxxx',
     icon: <CIcon icon={cilBell} customClassName="nav-icon" />,
     items: [
       {
@@ -254,7 +313,7 @@ const _nav = [
   },
   {
     component: CNavItem,
-    name: 'Widgets',
+    name: 'Widgets xxxx',
     to: '/widgets',
     icon: <CIcon icon={cilCalculator} customClassName="nav-icon" />,
     badge: {
@@ -264,12 +323,18 @@ const _nav = [
   },
   {
     component: CNavTitle,
-    name: 'Extras',
+    name: 'DT',
+  },
+  {
+    component: CNavItem,
+    name: 'QHSE',
+    to: '/daf/gesadmin',
+    icon: <CIcon icon={cilCameraControl} customClassName="nav-icon" />,
   },
   {
     component: CNavGroup,
-    name: 'Pages',
-    icon: <CIcon icon={cilStar} customClassName="nav-icon" />,
+    name: 'Brigade',
+    icon: <CIcon icon={cilBriefcase} customClassName="nav-icon" />,
     items: [
       {
         component: CNavItem,
